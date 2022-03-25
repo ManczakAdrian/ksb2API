@@ -1,9 +1,7 @@
 package pl.manczak.ksb2api.api;
 
 
-import org.springframework.web.bind.annotation.RequestHeader;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,8 +19,14 @@ public class DogApi {
         dogList.add(new Dog("Burek","Samoyed "));
     }
 
+    @GetMapping
     public List<Dog> get(@RequestHeader int amount){
         return dogList.subList(0,amount);
+
+    }
+    @PostMapping
+    public void get(@RequestBody Dog dog){
+        dogList.add(dog);
 
     }
 }
