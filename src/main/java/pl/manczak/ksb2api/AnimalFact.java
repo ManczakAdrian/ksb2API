@@ -1,5 +1,5 @@
+package pl.manczak.ksb2api;
 
-package pl.manczak.ksb2api.client;
 import java.util.HashMap;
 import java.util.Map;
 import javax.annotation.Generated;
@@ -47,6 +47,21 @@ public class AnimalFact {
     private String updatedAt;
     @JsonProperty("__v")
     private Integer v;
+
+    private String src;
+
+    public String getSrc() {
+        return src;
+    }
+
+    public void setSrc(String src) {
+        this.src = src;
+    }
+
+    public void setAdditionalProperties(Map<String, Object> additionalProperties) {
+        this.additionalProperties = additionalProperties;
+    }
+
     @JsonProperty("source")
     private String source;
     @JsonProperty("used")
@@ -186,6 +201,7 @@ public class AnimalFact {
                 ", createdAt='" + createdAt + '\'' +
                 ", updatedAt='" + updatedAt + '\'' +
                 ", v=" + v +
+                ", src='" + src + '\'' +
                 ", source='" + source + '\'' +
                 ", used=" + used +
                 ", additionalProperties=" + additionalProperties +
